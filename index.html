@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f7f3">
+  <meta name="description" content="Himanshu Jasaiwal, software engineer in Delhi, India.">
+  <meta property="og:title" content="Himanshu Jasaiwal">
+  <meta property="og:description" content="Software engineer · Delhi, India">
+  <meta property="og:type" content="website">
+  <title>Himanshu Jasaiwal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f8f7f3;
+      --ink: #282923;
+      --muted: #777870;
+      --line: #deddd6;
+      --accent: #697765;
+      --sans: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --serif: "Newsreader", Georgia, serif;
+      --mono: "DM Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+    a:hover { color: var(--accent); }
+    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+    .shell { width: min(100% - 48px, 780px); margin: 0 auto; }
+    .mono, .eyebrow, .meta, .index { font-family: var(--mono); font-size: 10px; letter-spacing: .025em; }
+    .muted { color: var(--muted); }
+    header { min-height: 67px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); }
+    .name-link { font-size: 13px; font-weight: 600; text-decoration: none; letter-spacing: -.025em; }
+    nav { display: flex; gap: 24px; }
+    nav a { color: var(--muted); font-size: 11px; text-decoration: none; }
+    nav a:hover { color: var(--ink); }
+    .hero { padding: 60px 0 39px; }
+    .eyebrow { color: var(--muted); text-transform: uppercase; }
+    h1 { margin: 13px 0 10px; font-family: var(--serif); font-size: clamp(34px, 6vw, 49px); font-weight: 400; line-height: 1.06; letter-spacing: -.045em; }
+    .intro { max-width: 570px; margin: 0; color: #595a54; font-size: 14px; line-height: 1.75; }
+    .hero-links { display: flex; gap: 19px; margin-top: 20px; font-size: 12px; }
+    .hero-links a { text-decoration: none; }
+    .hero-links span { color: var(--muted); padding-left: 3px; }
+    section { scroll-margin-top: 24px; }
+    .section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 18px; margin-bottom: 13px; }
+    h2 { margin: 0; font-size: 12px; font-weight: 500; }
+    .section-heading p { margin: 0; color: var(--muted); font-size: 11px; }
+    .work-list { border-top: 1px solid var(--line); }
+    .work { display: grid; grid-template-columns: 34px minmax(0, 1fr) auto; gap: 12px; padding: 19px 0 20px; border-bottom: 1px solid var(--line); }
+    .index { color: var(--muted); padding-top: 3px; }
+    .work-title { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px; }
+    .work h3 { margin: 0; font-size: 14px; font-weight: 500; letter-spacing: -.02em; }
+    .meta { color: var(--muted); font-size: 9px; text-transform: uppercase; }
+    .work p { max-width: 610px; margin: 8px 0 0; color: #5e5f59; font-size: 12px; line-height: 1.7; }
+    .work-out { align-self: start; color: var(--muted); font-size: 14px; text-decoration: none; }
+    .work-out:hover { color: var(--accent); }
+    .work-kind { display: block; margin-top: 7px; color: var(--muted); font-family: var(--mono); font-size: 9px; }
+    #background, #video, #elsewhere { margin-top: 57px; }
+    .background-copy { max-width: 585px; margin: 0; color: #5e5f59; font-size: 12px; line-height: 1.75; }
+    .video-row { display: flex; align-items: center; justify-content: space-between; gap: 20px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 14px 0; }
+    .video-row p { margin: 0; color: #5e5f59; font-size: 12px; line-height: 1.6; }
+    .video-row a { flex: 0 0 auto; color: var(--accent); font-size: 11px; text-decoration: none; }
+    .link-list { display: flex; flex-wrap: wrap; gap: 10px 22px; padding: 15px 0 0; }
+    .link-list a { font-size: 11px; text-decoration: none; }
+    .contact { margin: 60px 0 35px; padding: 17px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; gap: 15px; }
+    .contact h2 { font-family: var(--serif); font-size: 21px; font-weight: 400; letter-spacing: -.02em; }
+    .contact a { font-size: 11px; }
+    footer { display: flex; justify-content: space-between; gap: 15px; padding: 0 0 24px; color: var(--muted); }
+    footer .mono { font-size: 9px; }
+    @media (max-width: 560px) {
+      .shell { width: min(100% - 36px, 780px); }
+      header { min-height: 61px; }
+      nav { gap: 13px; }
+      nav a { font-size: 10px; }
+      .hero { padding: 47px 0 32px; }
+      .intro { font-size: 13px; }
+      .section-heading { align-items: flex-start; flex-direction: column; gap: 6px; }
+      .work { grid-template-columns: 24px minmax(0,1fr) 12px; gap: 8px; padding: 17px 0; }
+      .work h3 { font-size: 13px; }
+      .work p { font-size: 11px; }
+      #background, #video, #elsewhere { margin-top: 44px; }
+      .video-row { align-items: flex-start; flex-direction: column; gap: 8px; }
+      .contact { align-items: flex-start; flex-direction: column; }
+      footer { flex-direction: column; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <a class="name-link" href="#top">Himanshu Jasaiwal</a>
+      <nav aria-label="Main navigation">
+        <a href="#work">Work</a>
+        <a href="#background">Background</a>
+        <a href="#elsewhere">Links</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="intro-title">
+        <div class="eyebrow">Software engineer · Delhi, India</div>
+        <h1 id="intro-title">Himanshu Jasaiwal</h1>
+        <p class="intro">I work across TypeScript, React, Node.js, and Python, mostly on product features, APIs, and reliability.</p>
+        <div class="hero-links">
+          <a href="/assets/Himanshu-Jasaiwal-Resume.pdf" download>Resume <span>↓</span></a>
+          <a href="https://github.com/hjasaiwal114" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
+          <a href="mailto:himanshujasaiwal114@gmail.com">Email <span>↗</span></a>
+        </div>
+      </section>
+
+      <section id="work" aria-labelledby="work-title">
+        <div class="section-heading">
+          <h2 id="work-title">Selected work</h2>
+          <p>Recent product and engineering work</p>
+        </div>
+        <div class="work-list">
+          <article class="work">
+            <div class="index">01</div>
+            <div>
+              <div class="work-title"><h3>Senzary</h3><span class="meta">Full-Stack Engineer · 2026—</span></div>
+              <p>Reworked ingestion and validation for a platform serving 50,000+ devices. Errors fell from 64% to 0%, restoring about one-second latency across 180+ facilities. Built two Node.js MCP servers with 59 tools.</p>
+            </div>
+            <a class="work-out" href="https://senzary.com/" target="_blank" rel="noreferrer" aria-label="Senzary website">↗</a>
+          </article>
+          <article class="work">
+            <div class="index">02</div>
+            <div>
+              <div class="work-title"><h3>AppX</h3><span class="meta">Full-Stack Engineer · 2025—26 · YC S21</span></div>
+              <p>Built onboarding, DRM course delivery, livestream, and checkout features for a creator platform serving 15,000+ creators. Worked across React, TypeScript, Node/Express, and PostgreSQL.</p>
+            </div>
+          </article>
+          <article class="work">
+            <div class="index">03</div>
+            <div>
+              <div class="work-title"><h3>HURC Healthcare Solutions</h3><span class="meta">Full-Stack Engineer · 2025</span></div>
+              <p>Built Node.js and FastAPI services for emergency-volume and revenue modeling across 11 hospitals. Moved financial calculations server-side and added regression checks.</p>
+            </div>
+            <a class="work-out" href="https://www.hurc.com/" target="_blank" rel="noreferrer" aria-label="HURC Healthcare website">↗</a>
+          </article>
+          <article class="work">
+            <div class="index">04</div>
+            <div>
+              <div class="work-title"><h3>M81 Media</h3><span class="meta">Full-Stack Engineer · 2023—25</span></div>
+              <p>Created ingestion and scraping APIs for growth tools covering keyword trends, sentiment, and answer-engine visibility, with webhook alerts.</p>
+            </div>
+            <a class="work-out" href="https://www.m81.in/" target="_blank" rel="noreferrer" aria-label="M81 Media website">↗</a>
+          </article>
+          <article class="work">
+            <div class="index">05</div>
+            <div>
+              <div class="work-title"><h3>Project Neo</h3><span class="meta">ML engineering · 2026</span></div>
+              <p>Contributed to Project Neo’s ML engineering evaluation program using public datasets and real CPU pipelines. Work spanned reproducible data setup, realistic failure and recovery paths, and grading checks validated against gold, alternate, and negative solutions.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="background" aria-labelledby="background-title">
+        <div class="section-heading">
+          <h2 id="background-title">Background</h2>
+        </div>
+        <p class="background-copy">Before software, I studied Mechanical &amp; Automation Engineering at Guru Gobind Singh Indraprastha University (2018–22).</p>
+      </section>
+
+      <section id="video" aria-labelledby="video-title">
+        <div class="section-heading">
+          <h2 id="video-title">A short introduction</h2>
+        </div>
+        <div class="video-row">
+          <p>A short introduction in Harkirat Singh’s “6 Experts vs 6 Beginners: The Dev Job Market in 2026.” My segment starts at 5:16.</p>
+          <a href="https://www.youtube.com/watch?v=_NM803oLFiw&amp;t=316s" target="_blank" rel="noreferrer">Watch on YouTube ↗</a>
+        </div>
+      </section>
+
+      <section id="elsewhere" aria-labelledby="links-title">
+        <div class="section-heading"><h2 id="links-title">Elsewhere</h2></div>
+        <div class="link-list">
+          <a href="https://www.linkedin.com/in/himanshu-jasaiwal-954a36168" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+          <a href="https://leetcode.com/u/hjasaiwal114/" target="_blank" rel="noreferrer">LeetCode ↗</a>
+          <a href="https://app.notion.com/p/Himanshu-s-Portfolio-11dc0854a25a807db7bbf0d6a3224d14" target="_blank" rel="noreferrer">Notion ↗</a>
+        </div>
+      </section>
+
+      <section class="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title">Contact</h2>
+        <a href="mailto:himanshujasaiwal114@gmail.com">himanshujasaiwal114@gmail.com ↗</a>
+      </section>
+    </main>
+    <footer><span class="mono">© 2026 Himanshu Jasaiwal</span><span class="mono">Delhi, India</span></footer>
+  </div>
+</body>
+</html>
